@@ -1,0 +1,402 @@
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+.container{
+   max-width: 1152px;
+    margin: 0 auto; 
+    
+}
+.menu{
+    float: right;
+}
+.menu li{
+    display: inline-block;
+    text-decoration: none; 
+    margin-left: 15px;  
+    font-size: 18px; 
+    margin: 10px;
+}
+.menu a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.menu a:hover{
+    color: deeppink;
+    transition-duration: 0.4s;
+}
+a.active{
+    color: deeppink;
+}
+header{
+    height: 100vh;
+    position: relative;
+    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/header-bg3.jpg');
+    background-color:dimgray;
+    background-size: cover;
+    background-position: center;
+}
+.front{
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: 2px solid white;
+    background: transparent;
+    color: aliceblue;
+    cursor: pointer;
+}
+.cv {
+    text-decoration: none;
+    color: white;
+}
+.scroll-down i{
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 25px;
+    -webkit-animation: bounce 2s alternate-reverse;
+    animation: bounce 2s alternate-reverse infinite;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+@keyframes bounce {
+    from{
+        top: 50px;
+    }
+    to{
+        top: 0;
+    }
+}
+.scroll-down i::after{
+    content: '';
+    top: 10px;
+    right: 12px;
+    height: 10px;
+    width: 0px;
+    border: 2px solid white;
+    cursor: pointer;
+    position: absolute;
+}
+.scroll-down{
+    position: absolute;
+    bottom: 15vh;
+    width: 100%;
+    text-align: center;
+}
+.section{
+    padding:8rem 0;
+}
+.flex{
+    display: flex;
+}
+.about-img img{
+    height: 400px;
+    border: 3px solid gray;
+    
+}
+.about-me{
+    margin-left: 40px;
+}
+.about-txt{
+    text-align: justify;
+}
+.social-icon a{
+    text-decoration: none;
+    color: deeppink;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.social-icon a i::before{
+    width: 30px;
+    height: 30px;
+    border: 2px solid deeppink;
+    border-radius: 50%;
+    padding: 0.2rem;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    padding-top: 0.3rem;
+}
+.social-icon a:hover i::before{
+    transform: rotate(360deg);
+}
+.text-align{
+    text-align: center;
+}
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.sec-back{
+    background: #f2f2f2;
+}
+.our-service{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.service-p{
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+.card-1{
+    border: 2px solid #BABBBD;
+    background-color: #f7f7f7;
+    padding: 1.5rem 0.5rem;
+}
+.card-1 i{
+    font-size: 2rem;
+    color: deeppink;
+}
+.margin-ani{
+    height: 2px;
+    width: 50px;
+    background-color: deeppink;
+    margin: 10px auto;
+    transition: all .3s linear;
+}
+.card-1:hover .margin-ani{
+    width: 100px;
+}
+.available h1{
+    font-size: 1.4rem;
+    font-weight: 7rem;
+}
+.button-2{
+    background-color: deeppink;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.quotes img{
+    border: 2px solid #BABBBD;
+    border-radius: 50%;
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+}
+.buttons button{
+    padding: 0.5rem 1rem;
+    border: 2px solid deeppink;
+    border-radius: 25px;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 15px;
+}
+.buttons{
+    text-align: center;
+}
+.buttons button:hover{
+    transition-duration: 0.4s;
+    background-color: deeppink;
+}
+.buttons button.active{
+    background-color: deeppink;
+}
+.portfolio-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem 1.5rem;
+    margin-top: 40px;
+}
+.portfolio-wrapper img{
+    width: 100%;
+}
+.portfolio-img{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-abt{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    background: #000;
+    color: #f7f7f7;
+    transition: all 0.3s;
+    opacity: 0.7;
+}
+.portfolio-abt::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.portfolio-img:hover .portfolio-abt{
+    top: 0;
+}
+.blog{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+.blog img{
+    width: 100%;
+    border-radius: 5%;
+}
+.contact-us{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.contact-us i{
+    font-size: 2rem;
+    color: deeppink;
+}
+.input-s{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.your-sub{
+    width: 99.4%;
+    margin-top: 30px;
+    height: 30px;
+}
+.your-mes{
+    width: 99.4%;
+    margin-top: 30px;
+    height: 60px;
+}
+.button-3{
+    background-color: deeppink;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    margin-top: 10px;
+    float: right;
+}
+.too-copyright{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: gray;
+    color: white;
+    margin-top: 500px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 100%;
+    border-color: gray;
+}
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+    background-color: black;
+}
+#backTop{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    transition: all 0.5s;
+    background: deeppink;
+}
+#backTop i {
+    color: white;
+    font-size: 30px;
+}
+/* mobile-menu */
+.mobile-menu span{
+    color: #f2f2f2;
+    font-size: 2.2rem;
+    cursor: pointer;
+    margin-top: -60px;
+    display: none;
+    float: right;
+}
+.mobile-menu .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+    height: 100%;
+    width: 100%;
+    width: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+.mobile-menu .overlay-content{
+    position: relative;
+    top: 10%;
+    left: 0;
+    width: 100%;
+}
+.mobile-menu .overlay-content a{
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.mobile-menu .closeBtn{
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    font-size: 3.2rem;
+    text-decoration: none;
+}
+.slider-dots ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 42px;
+}
+.slider-dots button{
+    width: 12px;
+    height: 6px;
+    margin: 5px 4px;
+    border: none;
+    outline: none;
+    background: deeppink;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 0;
+    opacity: 0.5;
+}
+.slider-dots li.slick-active button{
+    width: 20px;
+    opacity: 1;
+}
